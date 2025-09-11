@@ -16,7 +16,7 @@ arch = "arm64-v8a"
 
 [YouTube-Latest]
 build-mode = "both"
-version = "20.02.41"
+version = "20.02.40"
 excluded-patches = ""
 included-patches = " 'MaterialYou' "
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
