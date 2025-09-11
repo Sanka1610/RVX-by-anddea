@@ -1,6 +1,6 @@
 Music: 8.30.54  
 YouTube: 19.47.53  
-YouTube-Latest: 20.02.40  
+YouTube-Latest: 20.13.41  
 
 Important notes are listed in the Notes of the README.  
 Please be sure to review them.
