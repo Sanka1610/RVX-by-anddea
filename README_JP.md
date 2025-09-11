@@ -12,7 +12,7 @@ anddea氏のパッチを基にした、パッチ済みのYouTube・YouTube Music
 
   - ### 共通
 
-      - アーキテクチャ : arm64 - v8a
+      - アーキテクチャ : arm64-v8a
 
       - Rootマネージャー : Magisk系列、KernelSU系列、APatch系列
 
@@ -22,7 +22,7 @@ anddea氏のパッチを基にした、パッチ済みのYouTube・YouTube Music
 
       - バージョン : 安定版、最新版
 
-        - ※ 最新版は、YouTubeがプリインストールされている端末向けに提供しています。不安定な場合があるため使用には注意してください。
+        - ※ 最新版は、YouTubeがプリインストールされている端末向けに提供しています。不安定な場合があるため使用にはご注意ください。
 
     - #### YouTube Music
 
@@ -42,7 +42,7 @@ anddea氏のパッチを基にした、パッチ済みのYouTube・YouTube Music
 
 - Zygisk、またはその代替によって動作します。
 
-    ※ Zygisk Assistantを利用する場合は、Youtube、Youtube MusicにSU権限を与える必要があります。
+- Zygisk Assistantを利用する場合は、Youtube、Youtube MusicにSU権限を与える必要があります。
 
 - PlayStoreによる自動更新を無効化するために、[zygisk-detach](https://github.com/j-hc/zygisk-detach)の利用を推奨します。
 
@@ -51,6 +51,8 @@ anddea氏のパッチを基にした、パッチ済みのYouTube・YouTube Music
 - [MicroG/GmsCore](https://github.com/microg/GmsCore)、またはその代替によって動作します。
 
 - 元のYoutubeアプリとは別のアプリとしてインストールされます。
+
+- 
 
 
 ## クレジット
@@ -61,7 +63,7 @@ anddea氏のパッチを基にした、パッチ済みのYouTube・YouTube Music
 
 ### [**anddea**](https://github.com/anddea)
 
-  - [**ReVanced Patches**](https://github.com/anddea/revanced-patches)
+  - [ReVanced Patches](https://github.com/anddea/revanced-patches)
 
 
 
