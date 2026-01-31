@@ -6,5 +6,5 @@ Important notes are listed in the Notes of the README.
 Please be sure to review them.
   
 CLI: j-hc/revanced-cli-5.0.0-all.jar  
-Patches: anddea/patches-3.15.0.rvp  
-[Changelog](https://github.com/anddea/revanced-patches/releases/tag/v3.15.0)  
+Patches: anddea/patches-3.16.0.rvp  
+[Changelog](https://github.com/anddea/revanced-patches/releases/tag/v3.16.0)  
