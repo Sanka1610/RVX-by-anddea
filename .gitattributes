@@ -2,3 +2,7 @@ config.toml merge=ours
 README.md merge=ours
 README_JP.md merge=ours
 .github/** merge=ours
+
+build.sh merge=theirs
+module/** merge=theirs
+utils.sh merge=theirs
