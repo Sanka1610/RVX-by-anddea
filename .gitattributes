@@ -7,5 +7,10 @@ config.toml merge=ours
 README.md merge=ours
 README_JP.md merge=ours
 
-# CI / workflow
+# CI
 .github/** merge=ours
+
+# シェル系
+build.sh merge=ours
+module/customize.sh merge=ours
+utils.sh merge=ours
