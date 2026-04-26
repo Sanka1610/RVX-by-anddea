@@ -166,7 +166,9 @@ rm -rf temp/tmp.*
 if [ -z "$(ls -A1 "${BUILD_DIR}")" ]; then abort "All builds failed."; fi
 
 log "\nRefer to the README for important notes and setup instructions."
-log "Ensure you have reviewed them before use.\n"
+log "Ensure you have reviewed them before use."
+log "\n$(cat "$TEMP_DIR"/*/changelog.md)"
+
 
 SKIPPED=$(cat "$TEMP_DIR"/skipped 2>/dev/null || :)
 if [ -n "$SKIPPED" ]; then
