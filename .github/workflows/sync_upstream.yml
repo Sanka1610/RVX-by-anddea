@@ -38,7 +38,7 @@ jobs:
 
       - name: Merge upstream
         run: |
-          git merge upstream/main --no-edit || {
+          git merge upstream/main --no-edit --allow-unrelated-histories || {
             echo "Merge failed"
             exit 1
           }
