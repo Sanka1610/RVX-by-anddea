@@ -28,7 +28,7 @@ jobs:
 
       - name: Generate sync diff
         run: |
-          git diff --name-status HEAD private_origin/main -- . ':!.github' > /tmp/sync.diff || true
+          git diff --name-status HEAD private_origin/main -- . ':!.github' ':!sync.diff' > /tmp/sync.diff || true
 
           if [ ! -s /tmp/sync.diff ]; then
             echo "NO CHANGES $(date -u +%F_%T)" > /tmp/sync.diff
