@@ -1,0 +1,4 @@
+config.toml merge=ours
+README.md merge=ours
+README_JP.md merge=ours
+.github/** merge=ours
