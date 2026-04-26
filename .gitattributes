@@ -1,4 +1,11 @@
+# 設定系
+.gitattributes merge=ours
+.gitignore merge=ours
 config.toml merge=ours
+
+# ドキュメント
 README.md merge=ours
 README_JP.md merge=ours
+
+# CI / workflow
 .github/** merge=ours
