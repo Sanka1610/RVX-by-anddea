@@ -38,14 +38,13 @@ jobs:
 
       - name: Merge upstream
         run: |
-          git merge upstream/main --no-edit --allow-unrelated-histories -X ours || {
-            echo "Merge failed"
-            exit 1
-          }
+          git merge upstream/main --no-edit --allow-unrelated-histories || true
+
+          git checkout --ours .
+          git add .
 
       - name: Commit (if needed)
         run: |
-          git add .
           git commit -m "sync upstream" || echo "no changes"
 
       - name: Push upstream branch
