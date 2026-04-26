@@ -1,16 +1,11 @@
-# 設定系
+# 絶対
 .gitattributes merge=ours
-.gitignore merge=ours
 config.toml merge=ours
+
+# 同期
+.github/workflows/sync_upstream.yml merge=ours
+.github/workflows/upstream_to_main.yml merge=ours
 
 # ドキュメント
 README.md merge=ours
 README_JP.md merge=ours
-
-# CI
-.github/** merge=ours
-
-# シェル系
-build.sh merge=ours
-module/customize.sh merge=ours
-utils.sh merge=ours
