@@ -13,6 +13,7 @@
 parallel-jobs = 1
 compression-level = 9
 remove-rv-integrations-checks = true
+cli-source = "MorpheApp/morphe-cli"
 patches-source = "anddea/revanced-patches"
 rv-brand = "RVX"
 enable-magisk-update = true
