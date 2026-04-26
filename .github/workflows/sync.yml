@@ -31,7 +31,7 @@ jobs:
           git diff --name-status HEAD private_origin/main -- . ':!.github' ':!sync.diff' > /tmp/sync.diff || true
 
           if [ ! -s /tmp/sync.diff ]; then
-            echo "NO CHANGES $(date -u +%F_%T)" > /tmp/sync.diff
+            echo "NO CHANGES $(date -u +%F_%T-UTF)" > /tmp/sync.diff
           fi
 
       - name: Apply origin mirror and enforce protection
@@ -56,6 +56,6 @@ jobs:
           if git diff-index --quiet HEAD; then
             echo "No changes to commit."
           else
-            git commit -m "sync: update mirror $(date -u +%F_%T)"
+            git commit -m "sync: update mirror $(date -u +%F_%T-UTF)"
             git push origin main
           fi
