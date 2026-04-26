@@ -27,7 +27,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 module-prop-name = "RVX-by-anddea"
-arch = "arm64-v8a"
+arch = "all"
 
 [YouTube-Latest]
 build-mode = "both"
@@ -38,7 +38,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 module-prop-name = "RVX-by-anddea-Latest"
-arch = "arm64-v8a"
+arch = "all"
 
 [Music]
 build-mode = "both"
@@ -49,4 +49,4 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 module-prop-name = "RVX-Music-by-anddea"
-arch = "arm64-v8a"
+arch = "all"
