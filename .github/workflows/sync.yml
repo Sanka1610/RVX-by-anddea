@@ -1,0 +1,61 @@
+name: sync
+
+on:
+  schedule:
+    - cron: "0 9 * * *" # JST 18:00
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout public repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PUBLIC_TOKEN }}
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name "sync-bot"
+          git config user.email "sync-bot@users.noreply.github.com"
+
+      - name: Fetch private origin
+        run: |
+          git remote add private_origin https://x-access-token:${{ secrets.ORIGIN_TOKEN }}@github.com/${{ secrets.ORIGIN_REPO }}.git
+          git fetch private_origin main
+
+      - name: Generate sync diff
+        run: |
+          git diff --name-status HEAD private_origin/main -- . ':!.github' > /tmp/sync.diff || true
+
+          if [ ! -s /tmp/sync.diff ]; then
+            echo "NO CHANGES $(date -u +%F_%T)" > /tmp/sync.diff
+          fi
+
+      - name: Apply origin mirror and enforce protection
+        run: |
+ 
+          find . -maxdepth 1 ! -name '.' ! -name '.git' -exec rm -rf {} +
+          
+          git checkout private_origin/main -- .
+
+          git checkout HEAD -- .github/workflows/build.yml || true
+          git checkout HEAD -- .github/workflows/ci.yml || true
+          git checkout HEAD -- .github/workflows/sync.yml || true
+
+          rm -f .github/workflows/sync_upstream.yml || true
+          rm -f .github/workflows/upstream_to_main.yml || true
+          cp /tmp/sync.diff ./sync.diff
+
+      - name: Commit and push changes
+        run: |
+          git add -A
+          
+          if git diff-index --quiet HEAD; then
+            echo "No changes to commit."
+          else
+            git commit -m "sync: update mirror $(date -u +%F_%T)"
+            git push origin main
+          fi
