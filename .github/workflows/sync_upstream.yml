@@ -40,7 +40,7 @@ jobs:
         run: |
           git merge upstream/main --no-edit --allow-unrelated-histories || true
 
-          git checkout --ours .
+          git diff --name-only --diff-filter=U | xargs -r git checkout --ours
           git add .
 
       - name: Commit (if needed)
